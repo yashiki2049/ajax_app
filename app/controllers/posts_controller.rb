@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
 
   def checked
+    # binding.pry
     post = Post.find(params[:id])
     # URLパラメーターから、既読したメモのidが渡される
     if post.checked
@@ -27,7 +28,6 @@ class PostsController < ApplicationController
     item = Post.find(params[:id])
     render json: { post: item }
   end
-    end
 
 
 end
